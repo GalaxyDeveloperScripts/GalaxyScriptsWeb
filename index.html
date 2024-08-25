@@ -3,60 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
-    <title>GalaxyScripts</title>
+    <title>UI Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                Galaxy <span>Scripts</span>
+    <div class="container">
+        <header>
+            <h1>Lua Scripts</h1>
+            <button class="login-btn">Login</button>
+        </header>
+        <main>
+            <div class="scripts-section">
+                <h2>Your Scripts</h2>
+                <ul>
+                    <li><a href="#">Script 1</a></li>
+                    <li><a href="#">Script 2</a></li>
+                    <li><a href="#">Script 3</a></li>
+                    <!-- Add more scripts as needed -->
+                </ul>
             </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="https://galaxydeveloperscripts.github.io/GalaxyShadowProfile/" target="_blank">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="https://pastebin.com/raw/dcTRYQcU" target="_blank">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="https://pastebin.com/raw/zhzvFBGc" target="_blank">WebSite</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="https://discord.gg/nsHBwPYqMv" target="_blank">Discord Server</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="https://discord.com/channels/@me/1257641835430416465" target="_blank">Contact</a></div>
+            <div class="discord-section">
+                <h2>Join our Discord</h2>
+                <button class="discord-btn">Join Now</button>
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-        </div>
-        <div class="dropdown">
-            <div class="links">
-                <a href="https://galaxydeveloperscripts.github.io/GalaxyShadowProfile/" target="_blank">Home</a>
-                <a href="https://pastebin.com/raw/dcTRYQcU" target="_blank">About</a>
-                <a href="https://pastebin.com/raw/zhzvFBGc" target="_blank">WebSite</a>
-                <a href="https://discord.gg/nsHBwPYqMv" target="_blank">Discord Server</a>
-                <a href="https://discord.com/channels/@me/1257641835430416465" target="_blank">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
-        </div>
-    </nav>
-            </div>
-            <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Shadow</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Hi, im shadow, im a Lua Scripts Developer, i have a discord server and i hope to make everyone happy whit the scripts i post and whit my own scripts im making, i have a website too but is on developing.</p>
-                <div class="social-links">
-                    <a href="https://github.com/GalaxyDeveloperScripts" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://discord.com/channels/@me" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400" target="_blank"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://www.roblox.com/users/1550531637/profile" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500" target="_blank"><i class="fa-brands fa-x"></i></a>
-                    <a href="https://www.youtube.com/channel/UCkT4-34MiFuwNnVOePLe35g" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <a href="https://discord.gg/nsHBwPYqMv" target="_blank">
-                        <button>Join Discord</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:0});
-    </script>
-    <script src="script.js"></script>
+        </main>
+        <footer>
+            <p>&copy; 2024 Lua Scripts. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
