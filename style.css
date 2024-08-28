@@ -101,18 +101,19 @@ section .container {
     border-radius: 15px;
     font-size: 130%;
     font-style: unset;
-    color: red;
+    color: white;
     background-color: transparent;
     border: 3.2px solid red;
     text-decoration: none;
     transition: 0.2s linear;
+    box-shadow: 0 0 20px red;
 }
 
 .buttons a:hover {
     background-color: aqua;
     border: none;
     box-shadow: 0 0 10px 2px aqua;
-    color: black; /* Cambia il colore del testo quando il pulsante è attivo */
+    color: black; 
 }
 
 .back-video {
@@ -126,4 +127,49 @@ section .container {
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+}
+
+.info-box-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: nowrap; 
+    margin: 0; 
+    padding: 20px 0;
+    background-color: transparent;
+    height: auto;
+    align-items: flex-start;
+    position: relative;
+    top: -20px;
+}
+
+.info-box {
+    background-color: #312f2f;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px red;
+    width: 22%;
+    height: 200px;
+    text-align: center;
+    margin: 0 10px;
+    border: 2px solid red;
+}
+
+.info-box h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.info-box p{
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    line-height: 1.5;
 }
