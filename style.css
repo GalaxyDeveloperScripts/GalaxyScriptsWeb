@@ -1,28 +1,32 @@
+/* Global styles */
 * {
     padding: 0;
     margin: 1.5px;
     font-family: sans-serif;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    background-color: black;
+    background-clip: url(background.mp4);
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
     backdrop-filter: brightness(100%);
+    overflow: hidden;
 }
 
 nav {
     width: 100%;
     height: 10vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    background-clip: url(background.mp4);
+    position: relative;
+    z-index: 10;
 }
 
 nav .logo h1 {
@@ -30,13 +34,19 @@ nav .logo h1 {
     text-shadow: 0 0 10px red;
 }
 
+nav .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
 nav .links a {
-    position: relative;
     color: white;
     text-decoration: none;
-    margin: 0 20px;
     font-size: 1.2rem;
     text-shadow: 0 0 10px white;
+    position: relative;
 }
 
 .links a::before {
@@ -52,8 +62,65 @@ nav .links a {
     transition: transform 0.2s linear;
 }
 
-.links a:hover::before {
+nav .links a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: red;
+    transform: scale(0);
+    transition: transform 0.2s linear;
+}
+
+nav .links a:hover::before {
     transform: scale(1);
+    position: absolute;
+}
+
+nav .toggle-button {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+nav .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    nav .links {
+        display: none; /* Hide links on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    nav .links a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav .toggle-button {
+        display: flex;
+    }
+
+    nav .links.active {
+        display: flex;
+    }
 }
 
 section {
@@ -119,10 +186,10 @@ section .container {
 
 .back-video {
     position: absolute;
-    top: -1%;
-    left: 0%;
-    min-width: 100%;
-    min-height: 100%;
+    top: -10%;
+    left: -0.2%;
+    min-width: 109%;
+    min-height: 109%;
     width: auto;
     height: auto;
     right: 0;
@@ -168,7 +235,7 @@ body {
     color: white;
 }
 
-.info-box p{
+.info-box p {
     font-size: 14px;
     color: white;
     margin: 0;
